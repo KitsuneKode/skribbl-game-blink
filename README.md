@@ -4,9 +4,10 @@ It is a blink that allows you to play game like skribbl.io onChain!
 ## Demo Video
 
 Check out the video below to see Scribble Blinks in action:
-
-[![Scribble Blinks Demo](
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](
 https://github.com/user-attachments/assets/fa559b0c-a44b-47b8-9e36-0c9291df1f20)
+
+
 
 ## Dial.to Link
 
