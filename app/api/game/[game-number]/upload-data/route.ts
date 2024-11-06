@@ -2,11 +2,11 @@ import { gameUtils } from '@/app/utils/util';
 
 export async function POST(
   req: Request,
-  { params }: { params: { 'game-number': string } }
+  { params }: { params: Promise<{ 'game-number': string }> }
 ) {
   try {
     const { description, hint } = await req.json();
-    const gameNumber = await params['game-number'];
+    const { 'game-number': gameNumber } = await params;
     console.log(
       'gameNumber',
       gameNumber,

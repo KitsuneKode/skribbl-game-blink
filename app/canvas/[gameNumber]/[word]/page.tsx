@@ -1,10 +1,10 @@
 import DrawingPanel from '@/app/components/drawing-panel';
 
 interface CanvasProps {
-  params: {
+  params: Promise<{
     word: string;
     gameNumber: string;
-  };
+  }>;
 }
 
 export default async function Canvas({ params }: CanvasProps) {

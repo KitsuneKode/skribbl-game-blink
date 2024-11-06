@@ -2,11 +2,10 @@ import { gameUtils } from '@/app/utils/util';
 
 export async function GET(
   req: Request,
-  { params }: { params: { 'game-number': string; field: string } }
+  context: { params: Promise<{ 'game-number': string; field: string }> }
 ) {
   try {
-    const gameNumber = await params['game-number'];
-    const field = await params['field'];
+    const { 'game-number': gameNumber, field } = await context.params;
 
     const fieldData = await gameUtils.getDetail(Number(gameNumber), field);
     return Response.json({ fieldData });

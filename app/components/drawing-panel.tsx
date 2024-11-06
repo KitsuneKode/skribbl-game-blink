@@ -130,8 +130,16 @@ export default function CanvasPanel({
     | React.MouseEvent<HTMLCanvasElement>
     | React.TouchEvent<HTMLCanvasElement>) => {
     if (!isTimerRunning) return;
-    const { offsetX, offsetY } =
-      nativeEvent instanceof MouseEvent ? nativeEvent : nativeEvent.touches[0];
+    const offsetX =
+      nativeEvent instanceof MouseEvent
+        ? nativeEvent.offsetX
+        : nativeEvent.touches[0].clientX -
+          canvasRef.current!.getBoundingClientRect().left;
+    const offsetY =
+      nativeEvent instanceof MouseEvent
+        ? nativeEvent.offsetY
+        : nativeEvent.touches[0].clientY -
+          canvasRef.current!.getBoundingClientRect().top;
     contextRef.current?.beginPath();
     contextRef.current?.moveTo(offsetX, offsetY);
     setIsDrawing(true);
@@ -164,8 +172,16 @@ export default function CanvasPanel({
     | React.TouchEvent<HTMLCanvasElement>) => {
     if (!isDrawing || !isTimerRunning) return;
 
-    const { offsetX, offsetY } =
-      nativeEvent instanceof MouseEvent ? nativeEvent : nativeEvent.touches[0];
+    const offsetX =
+      nativeEvent instanceof MouseEvent
+        ? nativeEvent.offsetX
+        : nativeEvent.touches[0].clientX -
+          canvasRef.current!.getBoundingClientRect().left;
+    const offsetY =
+      nativeEvent instanceof MouseEvent
+        ? nativeEvent.offsetY
+        : nativeEvent.touches[0].clientY -
+          canvasRef.current!.getBoundingClientRect().top;
 
     if (tool === 'eraser') {
       contextRef.current!.save();
