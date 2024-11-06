@@ -6,7 +6,7 @@ export async function GET(
 ) {
   try {
     const gameNumber = await params['game-number'];
-    const field = await params.field;
+    const field = await params['field'];
 
     const fieldData = await gameUtils.getDetail(Number(gameNumber), field);
     return Response.json({ fieldData });
