@@ -48,7 +48,6 @@ export const POST = async (req: Request) => {
     const TO_PUB_KEY = new PublicKey(
       '5ZVUHrjHtD6tLDScordsosj8wvdXYU2Mu6vjR49xT3Ku'
     );
-    //FIXME ADD The hint route to get the route/ makesure to passon the transaction signature and memo check. Add the hint and description to db. change the create-game route to add those to db and also dessctiption route should be there as well
 
     const { fieldData: hint } = await (
       await fetch(
