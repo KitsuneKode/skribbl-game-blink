@@ -2,7 +2,6 @@ import {
   ActionGetResponse,
   ActionPostRequest,
   ActionPostResponse,
-  ACTIONS_CORS_HEADERS,
   createActionHeaders,
   createPostResponse,
 } from '@solana/actions';
@@ -84,7 +83,7 @@ export const POST = async (req: Request) => {
         },
       },
     });
-    return Response.json(payload, { headers: ACTIONS_CORS_HEADERS });
+    return Response.json(payload, { headers });
   } catch (error) {
     return Response.json(
       { message: 'Something went Wrong', error },

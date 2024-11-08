@@ -3,7 +3,6 @@ import {
   ActionError,
   ActionPostRequest,
   ActionPostResponse,
-  ACTIONS_CORS_HEADERS,
   createActionHeaders,
   createPostResponse,
   MEMO_PROGRAM_ID,
@@ -50,10 +49,7 @@ export const POST = async (req: Request) => {
     try {
       account = new PublicKey(body.account);
     } catch (error) {
-      return Response.json(
-        { message: 'Invalid Account', error },
-        { headers: ACTIONS_CORS_HEADERS }
-      );
+      return Response.json({ message: 'Invalid Account', error }, { headers });
     }
     const connection = new Connection(clusterApiUrl('devnet'));
 
