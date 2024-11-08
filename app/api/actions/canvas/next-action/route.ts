@@ -1,5 +1,7 @@
 import { ActionError, createActionHeaders, NextAction } from '@solana/actions';
-const headers = createActionHeaders();
+const headers = createActionHeaders({
+  chainId: 'devnet',
+});
 
 export const GET = async () => {
   return Response.json({ message: 'Method not supported' } as ActionError, {

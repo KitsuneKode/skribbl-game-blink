@@ -15,7 +15,9 @@ import {
   Transaction,
 } from '@solana/web3.js';
 
-const headers = createActionHeaders();
+const headers = createActionHeaders({
+  chainId: 'devnet',
+});
 
 export const GET = async (req: Request) => {
   const payload: ActionGetResponse = {

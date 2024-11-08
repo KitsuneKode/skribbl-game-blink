@@ -1,6 +1,8 @@
 import { ActionsJson, createActionHeaders } from '@solana/actions';
 
-const headers = createActionHeaders();
+const headers = createActionHeaders({
+  chainId: 'devnet',
+});
 
 export const GET = async () => {
   const payload: ActionsJson = {
