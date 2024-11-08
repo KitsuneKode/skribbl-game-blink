@@ -2,6 +2,7 @@ import { ActionsJson, createActionHeaders } from '@solana/actions';
 
 const headers = createActionHeaders({
   chainId: 'devnet',
+  actionVersion: '2.1.3',
 });
 
 export const GET = async () => {
