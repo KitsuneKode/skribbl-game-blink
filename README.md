@@ -14,7 +14,7 @@ https://github.com/user-attachments/assets/fa559b0c-a44b-47b8-9e36-0c9291df1f20)
 
 To see the project unfurl in action, visit our project page on:
 
-[Dial.to Project Page](https://dial.to/?action=solana-action%3Ahttps%3A%2F%2Fskribbl-game-blink.vercel.app%2Fapi%2Factions%2Fcreate-game&cluster=devnet)
+[Dial.to Project Page](https://dial.to/?action=solana-action%3Ahttps%3A%2F%2Fskribbl-blink.kitsunekode.me%2Fapi%2Factions%2Fcreate-game&cluster=devnet)
 
 ## Twitter Post
 
